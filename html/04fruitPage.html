@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>구매하기_상세페이지</title>
+<script src="../jquery/jquery-3.7.1.js"></script>
+<script src="../jquery/jquery-migrate-3.4.0.js"></script>
+<link href="../css/topStyle.css" type="text/css" rel="stylesheet">
+<style>
+	
+	div {
+		background-color: aliceblue;
+		float: right;
+		width: 300px;
+		margin: 30px 200px 0 0;
+		padding: 30px;
+	}
+	
+	span {
+		font-weight: bold;
+	}
+	
+	img {
+		width: 50%;
+		margin: 30px 0 0 200px;
+	}
+	
+	button {
+		margin-top: 10px;
+	}
+
+	
+</style>
+</head>
+<body>
+    <nav id="miniMenubar">
+        <ul>
+			<li><a href="../index.html">Home</a></li>
+            <li><a href="./02sign.html">회원가입</a></li>
+            <li><a href="./02login.html">로그인</a></li>
+        </ul>
+    </nav>
+    <nav id = "mainMenubar">
+        <ul>
+            <li><a href="./03intoduce.html">가게소개</a></li>
+            <li><a href="./04fruit.html">구매하기</a></li>
+            <li><a href="./05notice.html">공지사항</a></li>
+            <li><a href="./06question.html">문의사항</a></li>
+        </ul>
+    </nav>
+    
+    <img src="../images/watermelon_detail.jpg" alt="상세페이지">
+    
+    <div>
+	<span>수박</span>
+	<p>\15,000</p>
+	<hr>
+    <select id="count">
+		<option value="1">1개</option>
+		<option value="2">2개</option>
+		<option value="3">3개</option>
+		<option value="4">4개</option>
+		<option value="5">5개</option>
+	</select>
+	<br>
+	<button id="order">주문하기</button>
+	<button id="orders">대량 주문하기</button>
+	</div>
+	
+	<script>
+		$("#order").click(function(){
+			alert("주문해주셔서 감사합니다 :) \n주문 수량 : " + $("#count option:selected").val()
+			+ "개 \n주문 금액 : " + (15000 * $("#count option:selected").val()) + "원");
+		});
+		
+		$("#orders").click(function(){
+			location.href = "./04orders.html"
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>대량 주문하기</title>
+<link href="../css/topStyle.css" type="text/css" rel="stylesheet">
+<style>
+	#all {
+		margin: 0 30px 0 30px;
+	}
+	
+	form {
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+	fieldset {
+		background-color: whitesmoke;
+		text-align: center;
+	}
+	
+	legend {
+		font-size: large;
+		font-weight: bold;
+	}
+	
+	#btn {
+		padding: 15px;
+	}
+	
+	#write {
+		color: darksalmon;
+		font-weight: bold;
+		margin-top: 30px
+	}
+	
+	table, td, th {
+		border: 1px solid black;
+ 	 	border-collapse: collapse;
+	}
+	
+	th {
+		background-color: bisque;
+	}
+	
+	td {
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+    <nav id="miniMenubar">
+        <ul>
+			<li><a href="../index.html">Home</a></li>
+            <li><a href="./02sign.html">회원가입</a></li>
+            <li><a href="./02login.html">로그인</a></li>
+        </ul>
+    </nav>
+    <nav id = "mainMenubar">
+        <ul>
+            <li><a href="./03intoduce.html">가게소개</a></li>
+            <li><a href="./04fruit.html">구매하기</a></li>
+            <li><a href="./05notice.html">공지사항</a></li>
+            <li><a href="./06question.html">문의사항</a></li>
+        </ul>
+    </nav>
+	
+	<div id="all">
+		<h2>대량 주문하기</h2>
+		<h3>* 접수 후 최대 2일 이내에 연락드립니다 *</h3>
+		대량 주문은 주문하기 드롭박스에서 선택할 수 있는 수량보다 많은 수량입니다.
+		<p id="write">▼ 작성 예시 ▼</p>
+		<table>
+			<tr>
+				<th>주문 품목</th>
+				<th>주문 수량</th>
+				<th>아이디</th>
+				<th>성함</th>
+				<th>이메일 주소</th>
+				<th>연락처</th>
+			</tr>
+			<tr>
+				<td>수박</td>
+				<td>30개</td>
+				<td>hong</td>
+				<td>홍길동</td>
+				<td>hong@fruit.com</td>
+				<td>010-1234-5678</td>
+			</tr>
+		</table>
+		    <form>
+			<fieldset>
+				<legend>대량 주문</legend>
+	    		<p>주문 품목 : <input type="text" id="fruit"/></p>
+	    		<p>주문 수량 : <input type="text" id="count"/></p>
+	    		<p>아이디 : <input type="text" id="id"/></p>
+	    		<p>성함 : <input type="text" id="names"/></p>
+	    		<p>이메일 주소 : <input type="text" id="mail"/></p>
+	    		<p>연락처 : <input type="text" id="tel"/></p>
+	    		<p> <textarea cols="30px" rows="10px" placeholder="문의할 내용이 있다면 입력해주세요. 없다면 미작성!" id="memo"></textarea> </p>
+	    		<p id="tel">전화 문의 : ☎ 031-123-1234</p>
+	    	</fieldset>
+	    	
+	    	<div id="btn"><input type="button" value="저장" onclick="save()"/>
+	    	<input type="button" value="취소" onclick="location.reload();"/>
+	    	</div>
+	    
+	    </form>
+    </div>
+    <script>
+		var fruit = document.getElementById("fruit");
+		var count = document.getElementById("count");
+		var id = document.getElementById("id");
+		var names = document.getElementById("names");
+		var mail = document.getElementById("mail");
+		var tel = document.getElementById("tel");
+		var memo = document.getElementById("memo");
+		
+		function save() {
+				if(fruit.value != "" && count.value != "" && id.value != "" && names.value != "" && mail.value != "" && tel.value != "") {
+					alert("대량 주문이 접수되었습니다. 남겨주신 이메일 주소 또는 연락처로 빠른 시일 내에 회신드리겠습니다. 감사합니다.");
+					location.reload();
+				} else {
+					alert("빈칸을 확인해주세요");
+				}
+		}
+	</script>
+</body>
+</html>

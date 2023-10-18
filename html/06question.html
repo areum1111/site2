@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>문의사항</title>
+<link href="../css/topStyle.css" type="text/css" rel="stylesheet">
+<style>
+	form {
+		width: 400px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 20px
+		
+	}
+	
+	fieldset {
+		background-color: whitesmoke;
+		text-align: center;
+	}
+	
+	legend {
+		font-size: large;
+		font-weight: bold;
+	}
+	
+	div {
+		padding: 15px;
+	}
+</style>
+</head>
+<body>
+    <nav id="miniMenubar">
+        <ul>
+			<li><a href="../index.html">Home</a></li>
+            <li><a href="./02sign.html">회원가입</a></li>
+            <li><a href="./02login.html">로그인</a></li>
+        </ul>
+    </nav>
+    <nav id = "mainMenubar">
+        <ul>
+            <li><a href="./03intoduce.html">가게소개</a></li>
+            <li><a href="./04fruit.html">구매하기</a></li>
+            <li><a href="./05notice.html">공지사항</a></li>
+            <li><a href="./06question.html">문의사항</a></li>
+        </ul>
+    </nav>
+	
+    <form>
+		<fieldset>
+			<legend>문의사항</legend>
+    		<p>아이디 : <input type="text" id="id"/></p>
+    		<p>이메일 주소 : <input type="text" id="mail"/></p>
+    		<p>연락처 : <input type="text" id="tel"/></p>
+    		<p> <textarea cols="30px" rows="10px" placeholder="문의할 내용을 입력해주세요" id="memo"></textarea> </p>
+    	</fieldset>
+    	
+    	<div><input type="button" value="저장" onclick="save()"/>
+    	<input type="button" value="취소" onclick="location.reload();"/>
+    	</div>
+    
+    </form>
+    	
+    <script>
+		var id = document.getElementById("id");
+		var mail = document.getElementById("mail");
+		var tel = document.getElementById("tel");
+		var memo = document.getElementById("memo");
+		
+		function save() {
+				if(id.value != "" && mail.value != "" && tel.value != "" && memo.value != "") {
+					alert("문의사항이 저장되었습니다. 남겨주신 이메일 주소 또는 연락처로 빠른 시일 내에 답변드리겠습니다. 감사합니다.");
+					location.reload();
+				} else {
+					alert("빈칸을 확인해주세요");
+				}
+		}
+	</script>
+</body>
+</html>

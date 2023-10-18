@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>구매하기</title>
+<link href="../css/topStyle.css" type="text/css" rel="stylesheet">
+<style>
+	div {
+		display: block;
+		margin-left: 500px;
+	}
+	
+	#top {
+		margin-top: 30px
+	}
+	
+	div img {
+		border: solid 1px gray;
+		margin: 10px;
+		width: 300px;
+		height: 300px;
+	}
+	
+	div img:hover {
+		/*transform() 2D 변환*/
+		 transform: scale(1.5); /*scale() 요소 크기 크거나 작게*/
+		 transition: transform .2s; /*transform 효과가 0.2초 걸쳐 전환됨*/
+	}
+	
+</style>
+</head>
+<body>
+    <nav id="miniMenubar">
+        <ul>
+			<li><a href="../index.html">Home</a></li>
+            <li><a href="./02sign.html">회원가입</a></li>
+            <li><a href="./02login.html">로그인</a></li>
+        </ul>
+    </nav>
+    <nav id = "mainMenubar">
+        <ul>
+            <li><a href="./03intoduce.html">가게소개</a></li>
+            <li><a href="./04fruit.html">구매하기</a></li>
+            <li><a href="./05notice.html">공지사항</a></li>
+            <li><a href="./06question.html">문의사항</a></li>
+        </ul>
+    </nav>
+    
+    <div id="top">
+	    <img src="../images/watermelon.jpg" onclick="location.href='./04fruitPage.html'" id="watermelon">
+	    <img src="../images/kiwi.jpg">
+	    <img src="../images/pineapple.jpg">
+    </div>
+    <div id="bottom">
+	    <img src="../images/banana.jpg">
+	    <img src="../images/blueberry.jpg">
+	    <img src="../images/cherry.jpg">
+    </div>
+</body>
+</html>

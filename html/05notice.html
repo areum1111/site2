@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>공지사항</title>
+<script src="../jquery/jquery-3.7.1.js"></script>
+<script src="../jquery/jquery-migrate-3.4.0.js"></script>
+<link href="../css/topStyle.css" type="text/css" rel="stylesheet">
+<style>
+	#noticeMenu {
+	    background: lightgray;
+	    margin-top: 20px;
+	    padding: 5px
+	}
+
+	#noticeMenu ul {
+	    margin: 0;
+	    padding-left: 50px;
+	    text-align: center;
+	}
+	
+	#noticeMenu ul li {
+	    display: inline-block;
+	    list-style-type: none;
+	    padding: 0px 30px;
+	    font-weight: bold;
+	    margin-left: 30px;
+	}
+	#notice {
+	    margin-top: 20px;
+	    padding: 10px;
+	}
+
+	#notice ul {
+	    margin: 0;
+	    padding-left: 120px;
+	    text-align: center;
+	}
+	
+	#notice ul li {
+	    display: inline-block;
+	    list-style-type: none;
+	    padding: 0px 30px;
+	    margin-left: 10px;
+	}
+</style>
+</head>
+<body>
+    <nav id="miniMenubar">
+        <ul>
+			<li><a href="../index.html">Home</a></li>
+            <li><a href="./02sign.html">회원가입</a></li>
+            <li><a href="./02login.html">로그인</a></li>
+        </ul>
+    </nav>
+    <nav id = "mainMenubar">
+        <ul>
+            <li><a href="./03intoduce.html">가게소개</a></li>
+            <li><a href="./04fruit.html">구매하기</a></li>
+            <li><a href="./05notice.html">공지사항</a></li>
+            <li><a href="./06question.html">문의사항</a></li>
+        </ul>
+    </nav>
+    
+    <nav id="noticeMenu">
+    <ul>
+		<li>No</li>
+		<li>제목</li>
+		<li>날짜</li>
+	</ul>
+	</nav>
+	
+	<nav id="notice">
+    <ul>
+		<li>1</li>
+		<li id=noticeInfo>배송 안내</li>
+		<li>2023-10-18</li>
+	</ul>
+	</nav>
+	
+	<script>
+		$("#noticeInfo").click(function() {
+			window.open("./05noticePage.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=400,height=400");
+		});
+	</script>
+</body>
+</html>

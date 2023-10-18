@@ -1,0 +1,82 @@
+/* 로그인 메뉴 */
+#miniMenubar {
+    padding: 10px
+}
+
+/* ul 태그는 순서 없는 목록 */
+/* margin은 오브젝트와 화면과의 여백, padding은 오브젝트 내의 내부 여백 */
+#miniMenubar ul{
+    margin: 0;
+    padding-right: 50px;
+    float: right;
+}
+
+/* inline은 줄바꿈 없음, block은 줄바꿈, inline-block은 줄바꿈은 없지만 각 요소들의 속성값을 줄 수 있음 */
+/* list-syyle-type은 리스트 앞에 마커 스타일 */
+#miniMenubar ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0px 30px;
+    font-weight: bold;
+}
+
+/* 상단바 내 a 태그 글씨 색 변경, 링크 표시 삭제 */
+#miniMenubar ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+/* 커서 올렸을 때 색상 변경 */
+#miniMenubar ul li a:hover {
+    color: white;
+    background: black;
+}
+
+/* 메뉴바 배경색 변경 */
+#mainMenubar {
+    background: pink;
+    margin-top: 20px;
+    padding: 10px
+}
+
+#mainMenubar ul{
+    margin: 0;
+    padding-left: 50px;
+}
+
+#mainMenubar ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0px 30px;
+    font-weight: bold;
+    font-size: large;
+}
+
+#mainMenubar ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+#mainMenubar ul li a:hover {
+    color: pink;
+    background: white;
+}
+
+#banner {
+    border: solid grey;
+    border-radius: 2%;
+    margin-top: 10px;
+}
+
+#banner img {
+    border-radius: 2%;
+}
+
+#footer{
+    text-align: center;
+    font-weight: bold;
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}

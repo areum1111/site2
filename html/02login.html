@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>로그인</title>
+<link href="../css/topStyle.css" type="text/css" rel="stylesheet">
+<style>
+	form {
+		width: 400px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 20px
+	}
+	
+	fieldset {
+		background-color: aliceblue;
+		text-align: center;
+	}
+	
+	legend {
+		font-size: large;
+		font-weight: bold;
+	}
+	
+	div {
+		padding: 15px;
+	}
+</style>
+</head>
+<body>
+    <nav id="miniMenubar">
+        <ul>
+			<li><a href="../index.html">Home</a></li>
+            <li><a href="./02sign.html">회원가입</a></li>
+            <li><a href="./02login.html">로그인</a></li>
+        </ul>
+    </nav>
+    <nav id = "mainMenubar">
+        <ul>
+            <li><a href="./03intoduce.html">가게소개</a></li>
+            <li><a href="./04fruit.html">구매하기</a></li>
+            <li><a href="./05notice.html">공지사항</a></li>
+            <li><a href="./06question.html">문의사항</a></li>
+        </ul>
+    </nav>
+    
+    <form>
+		<fieldset>
+			<legend>로그인</legend>
+			ID <br>
+			<input type="text" placeholder="customer" id="id"/> <br>
+			PassWord <br>
+			<input type="password" placeholder="1234" id="pw"/>
+		</fieldset>
+		<div><input type="button" value="로그인" onclick="logIn()"/>
+		<input type="button" value="회원가입" onclick="location.href='./02sign.html'"/></div>
+	</form>
+	
+<script>
+	var id = document.getElementById("id");
+	var pw = document.getElementById("pw");
+	
+	function logIn() {
+		if(id.value != "" && pw.value != "") {
+			if(id.value == "customer") {
+				if(pw.value == 1234) {
+					alert("로그인 성공!")
+					location.reload();
+				} else {
+					alert("비밀번호를 다시 확인해주세요")
+					pw.focus();
+				}
+			} else {
+				alert("아이디가 존재하지 않습니다.");
+				id.focus();
+			}
+		} else {
+			alert("빈칸을 확인하세요");
+		}
+	}
+
+</script>
+</body>
+</html>
